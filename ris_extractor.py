@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import os
-from pprint import pprint
 import rispy
 import argparse
 import sys
@@ -43,10 +42,8 @@ def main():
     try:
         with open(data_file, 'r') as bibliography_file:
             entries = rispy.load(bibliography_file)
-            print(type(entries))
             for entry in entries:
                 if entry['accession_number'] in accession_no_list:
-                    print(entry['accession_number'])
                     selected_records.append(entry)         
     except OSError as err:
         print("OS error: {0}".format(err))
