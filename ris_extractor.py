@@ -32,7 +32,7 @@ def main():
     # Get list of accession ids from input file
     accession_no_list = []
     try:
-        accession_no_list = lineList = [line.strip() for line in open(input_file)]
+        accession_no_list = [line.strip() for line in open(input_file)]
     except:
         print(f'Unable to open input file {input_file}')
         sys.exit(0)
